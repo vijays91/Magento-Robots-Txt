@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Vijay_Robotstxt>
+            <version>1.0.0</version>
+        </Vijay_Robotstxt>
+    </modules> 
+    <global>
+        <blocks>
+            <robotstxt>
+                <class>Vijay_Robotstxt_Block</class>
+            </robotstxt>
+        </blocks>
+        <helpers>
+            <robotstxt>
+                <class>Vijay_Robotstxt_Helper</class>
+            </robotstxt>
+        </helpers>
+    </global>
+    <admin>
+        <routers>
+            <robotstxt>
+                <use>admin</use>
+                <args>
+                    <module>Vijay_Robotstxt</module>
+                    <frontName>robotstxt</frontName>
+                </args>
+            </robotstxt>
+        </routers>
+    </admin>
+</config>

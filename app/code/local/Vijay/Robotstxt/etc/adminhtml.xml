@@ -1,0 +1,35 @@
+<?xml version="1.0"?> 
+<adminhtml>
+    <menu>
+        <vijay module="robotstxt">
+            <title>Vijay</title>
+            <sort_order>80</sort_order> 
+            <children>
+                <robotstxt module="robotstxt">
+                    <title>Robotstxt</title>
+					<action>robotstxt/adminhtml_robotstxt</action>
+					<sort_order>0</sort_order>
+                </robotstxt>
+            </children>
+        </vijay>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <vijay>
+                        <title>Vijay Robots Txt</title>
+                        <children>
+                            <robots>
+                                <title>Robotstxt</title>
+                            </robots>
+                        </children>
+                    </vijay>
+                </children>
+            </admin>
+        </resources>   
+    </acl>
+</adminhtml>

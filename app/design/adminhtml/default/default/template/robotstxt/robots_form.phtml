@@ -1,0 +1,48 @@
+<?php
+$path = BP . DS;
+$filename = 'robots.txt';
+$filepath = $path.'/'.$filename;
+if (file_exists($filepath)) 
+{
+	$file_read = fopen($filename, "r");
+	$robots_content = file_get_contents($filename);
+	fclose($file_read);
+}
+else
+	$robots_content = '';
+?>
+<div class="content-header">
+    <table cellspacing="0" class="grid-header">
+        <tr>
+            <td><h3 class="icon-head head-sales-order"><?php echo $this->__('Robotstxt Content')?></h3></td>
+            <td class="a-right">
+                <button onclick="editForm.submit()" class="scalable save" type="button"><span>Save Content</span></button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+	<div class="entry-edit">
+    	<div class="entry-edit-head">
+        	<h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('Robotstxt Content')?></h4>
+		</div>
+		
+        <fieldset id="my-fieldset">
+			<form id="edit_form" name="edit_form" method="post" action="<?php echo $this->getUrl('*/*/save')?>">
+				<input name="form_key" type="hidden" value="<?php echo Mage::getSingleton('core/session')->getFormKey() ?>" />
+				<table cellspacing="0" class="form-list">
+					<tr>
+						<td class="label">
+							<?php echo $this->__('Robotstxt Content')?>
+						</td>
+						<td class="input-ele">
+							<textarea rows="20" cols="120" name="content" id="content"><?php echo $robots_content;?></textarea>
+						</td>
+					</tr>
+				</table>
+			</form>
+        </fieldset>
+	</div>
+<script type="text/javascript">
+    var editForm = new varienForm('edit_form');
+</script>

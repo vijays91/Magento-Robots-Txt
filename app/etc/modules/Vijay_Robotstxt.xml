@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Vijay_Robotstxt>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Vijay_Robotstxt>
+    </modules>
+</config>
